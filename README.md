@@ -12,26 +12,36 @@ You need basic things like netstat, grep, awk, cut
 
 ```
 sudo apt install net-tools
-git clone
+git clone https://github.com/zetechmoy/arpport.git arpport
+cd arpport
 ```
 
-### Installing
+## Use
 
-First install python3 and pip3
+### Starting
+```
+bash arpport.sh [port] "command to start you service"
+```
+
+### Stopping
+From the same pwd where arpport.sh has been started
+```
+bash stop-arpport.sh
+```
+
+### Example
+```
+//Start
+cd /path/to/your/api
+bash arpport.sh 3000 "npm start"
+```
 
 ```
-sudo apt install python3 python-pip3
-```
-Then use pip3 to install needed python3's modules
-
-```
-pip3 install pandas sklearn tensorflow keras pandas random numpy pickle matplotlib
+//Stop
+cd /path/to/your/api
+bash stop-arpport.sh
 ```
 
 ## Authors
 
 * **Théo Guidoux** - [zetechmoy](https://github.com/zetechmoy) - [@TGuidoux](https://twitter.com/TGuidoux)
-
-## License
-
-This project is licensed under the Apache2 License - see the [LICENSE.md](LICENSE.md) file for details
